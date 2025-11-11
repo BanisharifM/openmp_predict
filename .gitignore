@@ -1,2 +1,5 @@
 .env
 .env
+tree-sitter-grammars
+._openmp_sources
+build
