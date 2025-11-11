@@ -1,0 +1,206 @@
+python src/feature_extraction/llm_extract_all_models.py
+============================================================
+LLM FEATURE EXTRACTION - ALL MODELS
+============================================================
+Models to run:
+  - deepseek: deepseek/deepseek-chat
+  - claude: anthropic/claude-sonnet-4-20250514
+  - gpt4o: openai/gpt-4o
+============================================================
+
+============================================================
+MODEL: DEEPSEEK
+============================================================
+API Model: deepseek/deepseek-chat
+Output: llm_features_deepseek.json
+============================================================
+
+Processing 42 files...
+
+[1/42] 10_sparselu.c... ✓
+[2/42] 11_strassen.c... ✓
+[3/42] 12_uts.c... ✓
+[4/42] 13_gemm.c... ✓
+[5/42] 14_gemver.c... ✓
+[6/42] 15_gesummv.c... ✓
+[7/42] 16_symm.c... ✓
+[8/42] 17_syr2k.c... ✓
+[9/42] 18_syrk.c... ✓
+[10/42] 19_trmm.c... ✓
+[11/42] 1_alignment.c... ✓
+[12/42] 20_2mm.c... ✓
+[13/42] 21_3mm.c... ✓
+[14/42] 22_atax.c... ✓
+[15/42] 23_bicg.c... ✓
+[16/42] 24_doitgen.c... ✓
+[17/42] 25_mvt.c... ✓
+[18/42] 26_cholesky.c... ✓
+[19/42] 27_durbin.c... ✓
+[20/42] 28_gramschmidt.c... ✓
+[21/42] 29_lu.c... ✓
+[22/42] 2_fft.c... ✓
+[23/42] 30_ludcmp.c... ✓
+[24/42] 31_trisolv.c... ✓
+[25/42] 32_correlation.c... ✓
+[26/42] 33_covariance.c... ✓
+[27/42] 34_deriche.c... ✓
+[28/42] 35_floyd-warshall.c... ✓
+[29/42] 36_nussinov.c... ✓
+[30/42] 37_adi.c... ✓
+[31/42] 38_fdtd-2d.c... ✓
+[32/42] 39_heat-3d.c... ✓
+[33/42] 3_fib.c... ✓
+[34/42] 40_jacobi-1d.c... ✓
+[35/42] 41_jacobi-2d.c... ✓
+[36/42] 42_seidel-2d.c... ✓
+[37/42] 4_floorplan.c... ✓
+[38/42] 5_health.c... ✓
+[39/42] 6_concom.c... ✓
+[40/42] 7_knapsack.c... ✓
+[41/42] 8_nqueens.c... ✓
+[42/42] 9_sort.c... ✓
+
+------------------------------------------------------------
+RESULTS
+------------------------------------------------------------
+✓ Successfully extracted: 42/42 files
+✓ Saved to: data/extracted_features/llm_features_deepseek.json
+⏱️  Time: 5.7 minutes
+
+💰 Estimated cost: $0.0630
+
+============================================================
+MODEL: CLAUDE
+============================================================
+API Model: anthropic/claude-sonnet-4.5
+Output: llm_features_claude.json
+============================================================
+
+Processing 42 files...
+
+[1/42] 10_sparselu.c... ✓
+[2/42] 11_strassen.c... ✓
+[3/42] 12_uts.c... ✓
+[4/42] 13_gemm.c... ✓
+[5/42] 14_gemver.c... ✓
+[6/42] 15_gesummv.c... ✓
+[7/42] 16_symm.c... ✓
+[8/42] 17_syr2k.c... ✓
+[9/42] 18_syrk.c... ✓
+[10/42] 19_trmm.c... ✓
+[11/42] 1_alignment.c... ✓
+[12/42] 20_2mm.c... ✓
+[13/42] 21_3mm.c... ✓
+[14/42] 22_atax.c... ✓
+[15/42] 23_bicg.c... ✓
+[16/42] 24_doitgen.c... ✓
+[17/42] 25_mvt.c... ✓
+[18/42] 26_cholesky.c... ✓
+[19/42] 27_durbin.c... ✓
+[20/42] 28_gramschmidt.c... ✓
+[21/42] 29_lu.c... ✓
+[22/42] 2_fft.c... ✓
+[23/42] 30_ludcmp.c... ✓
+[24/42] 31_trisolv.c... ✓
+[25/42] 32_correlation.c... ✓
+[26/42] 33_covariance.c... ✓
+[27/42] 34_deriche.c... ✓
+[28/42] 35_floyd-warshall.c... ✓
+[29/42] 36_nussinov.c... ✓
+[30/42] 37_adi.c... ✓
+[31/42] 38_fdtd-2d.c... ✓
+[32/42] 39_heat-3d.c... ✓
+[33/42] 3_fib.c... ✓
+[34/42] 40_jacobi-1d.c... ✓
+[35/42] 41_jacobi-2d.c... ✓
+[36/42] 42_seidel-2d.c... ✓
+[37/42] 4_floorplan.c... ✓
+[38/42] 5_health.c... ✓
+[39/42] 6_concom.c... ✓
+[40/42] 7_knapsack.c... ✓
+[41/42] 8_nqueens.c... ✓
+[42/42] 9_sort.c... ✓
+
+------------------------------------------------------------
+RESULTS
+------------------------------------------------------------
+✓ Successfully extracted: 42/42 files
+✓ Saved to: data/extracted_features/llm_features_claude.json
+⏱️  Time: 4.1 minutes
+
+💰 Estimated cost: $0.3780
+
+============================================================
+MODEL: GPT4O
+============================================================
+API Model: openai/gpt-4o
+Output: llm_features_gpt4o.json
+============================================================
+
+Processing 42 files...
+
+[1/42] 10_sparselu.c... ✓
+[2/42] 11_strassen.c... ✓
+[3/42] 12_uts.c... ✓
+[4/42] 13_gemm.c... ✓
+[5/42] 14_gemver.c... ✓
+[6/42] 15_gesummv.c... ✓
+[7/42] 16_symm.c... ✓
+[8/42] 17_syr2k.c... ✓
+[9/42] 18_syrk.c... ✓
+[10/42] 19_trmm.c... ✓
+[11/42] 1_alignment.c... ✓
+[12/42] 20_2mm.c... ✓
+[13/42] 21_3mm.c... ✓
+[14/42] 22_atax.c... ✓
+[15/42] 23_bicg.c... ✓
+[16/42] 24_doitgen.c... ✓
+[17/42] 25_mvt.c... ✓
+[18/42] 26_cholesky.c... ✓
+[19/42] 27_durbin.c... ✓
+[20/42] 28_gramschmidt.c... ✓
+[21/42] 29_lu.c... ✓
+[22/42] 2_fft.c... ✓
+[23/42] 30_ludcmp.c... ✓
+[24/42] 31_trisolv.c... ✓
+[25/42] 32_correlation.c... ✓
+[26/42] 33_covariance.c... ✓
+[27/42] 34_deriche.c... ✓
+[28/42] 35_floyd-warshall.c... ✓
+[29/42] 36_nussinov.c... ✓
+[30/42] 37_adi.c... ✓
+[31/42] 38_fdtd-2d.c... ✓
+[32/42] 39_heat-3d.c... ✓
+[33/42] 3_fib.c... ✓
+[34/42] 40_jacobi-1d.c... ✓
+[35/42] 41_jacobi-2d.c... ✓
+[36/42] 42_seidel-2d.c... ✓
+[37/42] 4_floorplan.c... ✓
+[38/42] 5_health.c... ✓
+[39/42] 6_concom.c... ✓
+[40/42] 7_knapsack.c... ✓
+[41/42] 8_nqueens.c... ✓
+[42/42] 9_sort.c... ✓
+
+------------------------------------------------------------
+RESULTS
+------------------------------------------------------------
+✓ Successfully extracted: 42/42 files
+✓ Saved to: data/extracted_features/llm_features_gpt4o.json
+⏱️  Time: 2.5 minutes
+
+💰 Estimated cost: $0.3150
+
+============================================================
+FINAL SUMMARY
+============================================================
+CLAUDE:
+  Success: 42/42 files
+  Cost: $0.3780
+GPT4O:
+  Success: 42/42 files
+  Cost: $0.3150
+
+💰 TOTAL COST: $0.6930
+
+✓ All models complete!

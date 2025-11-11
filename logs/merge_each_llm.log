@@ -1,0 +1,55 @@
+======================================================================
+CREATING DATASETS FOR EACH LLM MODEL
+======================================================================
+
+✓ Loaded static features: 17 features
+
+======================================================================
+Processing: DEEPSEEK
+======================================================================
+✓ Static features: 17
+✓ LLM features: 14
+✓ Total features: 31
+
+  Merging with profiling data:
+  ✓ WITH benchmark: deepseek_features_with_benchmark_tx2.csv (96 cols)
+  ✓ NO benchmark: deepseek_features_no_benchmark_tx2.csv (94 cols)
+  ✓ WITH benchmark: deepseek_features_with_benchmark_rubikpi.csv (184 cols)
+  ✓ NO benchmark: deepseek_features_no_benchmark_rubikpi.csv (182 cols)
+
+======================================================================
+Processing: CLAUDE
+======================================================================
+✓ Static features: 17
+✓ LLM features: 14
+✓ Total features: 31
+
+  Merging with profiling data:
+  ✓ WITH benchmark: claude_features_with_benchmark_tx2.csv (96 cols)
+  ✓ NO benchmark: claude_features_no_benchmark_tx2.csv (94 cols)
+  ✓ WITH benchmark: claude_features_with_benchmark_rubikpi.csv (184 cols)
+  ✓ NO benchmark: claude_features_no_benchmark_rubikpi.csv (182 cols)
+
+======================================================================
+Processing: GPT4O
+======================================================================
+✓ Static features: 17
+✓ LLM features: 14
+✓ Total features: 31
+
+  Merging with profiling data:
+  ✓ WITH benchmark: gpt4o_features_with_benchmark_tx2.csv (96 cols)
+  ✓ NO benchmark: gpt4o_features_no_benchmark_tx2.csv (94 cols)
+  ✓ WITH benchmark: gpt4o_features_with_benchmark_rubikpi.csv (184 cols)
+  ✓ NO benchmark: gpt4o_features_no_benchmark_rubikpi.csv (182 cols)
+
+======================================================================
+ALL LLM DATASETS CREATED!
+======================================================================
+
+Created datasets:
+  For each LLM (deepseek, claude, gpt4o) × 2 platforms × 2 versions:
+    - {llm}_features_with_benchmark_{platform}.csv
+    - {llm}_features_no_benchmark_{platform}.csv
+
+Total: 12 new datasets (3 LLMs × 2 platforms × 2 versions)

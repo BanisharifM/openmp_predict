@@ -1,0 +1,80 @@
+python src/feature_extraction/llm_extract_features.py
+============================================================
+LLM-BASED FEATURE EXTRACTION
+============================================================
+Model: deepseek/deepseek-chat
+Source directory: data/source_codes
+Output directory: data/extracted_features
+============================================================
+
+Processing 42 files...
+
+[1/42] 10_sparselu.c... ✓
+[2/42] 11_strassen.c... ✓
+[3/42] 12_uts.c... ✓
+[4/42] 13_gemm.c... ✓
+[5/42] 14_gemver.c... ✓
+[6/42] 15_gesummv.c... ✓
+[7/42] 16_symm.c... ✓
+[8/42] 17_syr2k.c... ✓
+[9/42] 18_syrk.c... ✓
+[10/42] 19_trmm.c... ✓
+[11/42] 1_alignment.c... ✓
+[12/42] 20_2mm.c... ✓
+[13/42] 21_3mm.c... ✓
+[14/42] 22_atax.c... ✓
+[15/42] 23_bicg.c... ✓
+[16/42] 24_doitgen.c... ✓
+[17/42] 25_mvt.c... ✓
+[18/42] 26_cholesky.c... ✓
+[19/42] 27_durbin.c... ✓
+[20/42] 28_gramschmidt.c... ✓
+[21/42] 29_lu.c... ✓
+[22/42] 2_fft.c... ✓
+[23/42] 30_ludcmp.c... ✓
+[24/42] 31_trisolv.c... ✓
+[25/42] 32_correlation.c... ✓
+[26/42] 33_covariance.c... ✓
+[27/42] 34_deriche.c... ✓
+[28/42] 35_floyd-warshall.c... ✓
+[29/42] 36_nussinov.c... ✓
+[30/42] 37_adi.c... ✓
+[31/42] 38_fdtd-2d.c... ✓
+[32/42] 39_heat-3d.c... ✓
+[33/42] 3_fib.c... ✓
+[34/42] 40_jacobi-1d.c... ✓
+[35/42] 41_jacobi-2d.c... ✓
+[36/42] 42_seidel-2d.c... ✓
+[37/42] 4_floorplan.c... ✓
+[38/42] 5_health.c... ✓
+[39/42] 6_concom.c... ✓
+[40/42] 7_knapsack.c... ✓
+[41/42] 8_nqueens.c... ✓
+[42/42] 9_sort.c... ✓
+
+============================================================
+EXTRACTION COMPLETE
+============================================================
+✓ Successfully extracted: 42/42 files
+✓ Saved to: data/extracted_features/llm_features.json
+
+💰 Estimated cost: $0.0630
+
+------------------------------------------------------------
+Sample LLM Features (first program):
+------------------------------------------------------------
+  estimated_iteration_count: -1
+  iteration_count_analysis: unknown
+  memory_access_pattern: non_unit_stride
+  spatial_locality: medium
+  temporal_locality: medium
+  data_dependency_type: complex
+  false_sharing_risk: medium
+  load_balance_characteristic: dynamic
+  algorithmic_complexity: O(n^3)
+  dominant_operation: arithmetic
+  vectorization_potential: medium
+  numa_sensitivity: medium
+  cache_behavior_pattern: mixed
+  parallelization_overhead: medium
+  scalability_bottleneck: synchronization

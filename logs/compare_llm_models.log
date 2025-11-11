@@ -1,0 +1,310 @@
+python src/feature_extraction/compare_llm_models.py
+======================================================================
+LLM FEATURE EXTRACTION COMPARISON
+======================================================================
+
+Loading LLM features...
+  DeepSeek: 42 programs
+  Claude:   42 programs
+  GPT-4o:   42 programs
+
+======================================================================
+CATEGORICAL FEATURE COMPARISON
+======================================================================
+
+MEMORY_ACCESS_PATTERN:
+----------------------------------------------------------------------
+Value                     DeepSeek        Claude          GPT-4o
+----------------------------------------------------------------------
+mixed                     29              34              10
+non_unit_stride           12              0               16
+random                    0               5               1
+unit_stride               1               3               15
+
+SPATIAL_LOCALITY:
+----------------------------------------------------------------------
+Value                     DeepSeek        Claude          GPT-4o
+----------------------------------------------------------------------
+high                      2               14              19
+low                       1               6               2
+medium                    39              22              21
+
+TEMPORAL_LOCALITY:
+----------------------------------------------------------------------
+Value                     DeepSeek        Claude          GPT-4o
+----------------------------------------------------------------------
+high                      3               10              3
+low                       1               8               4
+medium                    38              24              35
+
+DATA_DEPENDENCY_TYPE:
+----------------------------------------------------------------------
+Value                     DeepSeek        Claude          GPT-4o
+----------------------------------------------------------------------
+complex                   7               17              8
+cross_iteration           7               2               5
+loop_carried              5               16              21
+none                      23              7               8
+
+FALSE_SHARING_RISK:
+----------------------------------------------------------------------
+Value                     DeepSeek        Claude          GPT-4o
+----------------------------------------------------------------------
+high                      0               18              0
+low                       21              7               3
+medium                    20              17              39
+none                      1               0               0
+
+LOAD_BALANCE_CHARACTERISTIC:
+----------------------------------------------------------------------
+Value                     DeepSeek        Claude          GPT-4o
+----------------------------------------------------------------------
+dynamic                   11              0               9
+irregular                 1               26              4
+uniform                   30              16              29
+
+ALGORITHMIC_COMPLEXITY:
+----------------------------------------------------------------------
+Value                     DeepSeek        Claude          GPT-4o
+----------------------------------------------------------------------
+O(2^n)                    0               2               0
+O(n!)                     0               1               0
+O(n)                      1               0               1
+O(n*tsteps)               0               0               1
+O(n^2)                    14              15              13
+O(n^2.807)                0               1               0
+O(n^3)                    18              16              20
+O(n^4)                    0               2               0
+O(nlogn)                  2               2               2
+other                     7               3               5
+
+DOMINANT_OPERATION:
+----------------------------------------------------------------------
+Value                     DeepSeek        Claude          GPT-4o
+----------------------------------------------------------------------
+arithmetic                34              30              31
+logic                     1               2               0
+memory                    0               2               2
+mixed                     7               8               9
+
+VECTORIZATION_POTENTIAL:
+----------------------------------------------------------------------
+Value                     DeepSeek        Claude          GPT-4o
+----------------------------------------------------------------------
+high                      2               7               10
+low                       6               22              9
+medium                    34              13              23
+
+NUMA_SENSITIVITY:
+----------------------------------------------------------------------
+Value                     DeepSeek        Claude          GPT-4o
+----------------------------------------------------------------------
+high                      1               21              1
+low                       0               3               5
+medium                    41              18              36
+
+CACHE_BEHAVIOR_PATTERN:
+----------------------------------------------------------------------
+Value                     DeepSeek        Claude          GPT-4o
+----------------------------------------------------------------------
+blocked                   6               3               21
+mixed                     34              28              6
+random                    1               7               3
+streaming                 1               4               12
+
+PARALLELIZATION_OVERHEAD:
+----------------------------------------------------------------------
+Value                     DeepSeek        Claude          GPT-4o
+----------------------------------------------------------------------
+high                      0               19              7
+low                       26              15              18
+medium                    16              8               17
+
+SCALABILITY_BOTTLENECK:
+----------------------------------------------------------------------
+Value                     DeepSeek        Claude          GPT-4o
+----------------------------------------------------------------------
+load_imbalance            2               7               5
+memory_bandwidth          23              14              24
+none                      8               0               3
+synchronization           9               21              10
+
+======================================================================
+INTER-MODEL AGREEMENT
+======================================================================
+
+memory_access_pattern:
+  DeepSeek vs Claude:  61.9%
+  DeepSeek vs GPT-4o:  33.3%
+  Claude vs GPT-4o:    28.6%
+  All three agree:     21.4%
+
+spatial_locality:
+  DeepSeek vs Claude:  59.5%
+  DeepSeek vs GPT-4o:  52.4%
+  Claude vs GPT-4o:    50.0%
+  All three agree:     31.0%
+
+temporal_locality:
+  DeepSeek vs Claude:  66.7%
+  DeepSeek vs GPT-4o:  81.0%
+  Claude vs GPT-4o:    47.6%
+  All three agree:     47.6%
+
+data_dependency_type:
+  DeepSeek vs Claude:  38.1%
+  DeepSeek vs GPT-4o:  42.9%
+  Claude vs GPT-4o:    50.0%
+  All three agree:     21.4%
+
+false_sharing_risk:
+  DeepSeek vs Claude:  23.8%
+  DeepSeek vs GPT-4o:  50.0%
+  Claude vs GPT-4o:    40.5%
+  All three agree:     14.3%
+
+load_balance_characteristic:
+  DeepSeek vs Claude:  40.5%
+  DeepSeek vs GPT-4o:  88.1%
+  Claude vs GPT-4o:    47.6%
+  All three agree:     38.1%
+
+algorithmic_complexity:
+  DeepSeek vs Claude:  69.0%
+  DeepSeek vs GPT-4o:  78.6%
+  Claude vs GPT-4o:    66.7%
+  All three agree:     59.5%
+
+dominant_operation:
+  DeepSeek vs Claude:  83.3%
+  DeepSeek vs GPT-4o:  88.1%
+  Claude vs GPT-4o:    76.2%
+  All three agree:     73.8%
+
+vectorization_potential:
+  DeepSeek vs Claude:  47.6%
+  DeepSeek vs GPT-4o:  69.0%
+  Claude vs GPT-4o:    50.0%
+  All three agree:     35.7%
+
+cache_behavior_pattern:
+  DeepSeek vs Claude:  69.0%
+  DeepSeek vs GPT-4o:  33.3%
+  Claude vs GPT-4o:    28.6%
+  All three agree:     16.7%
+
+parallelization_overhead:
+  DeepSeek vs Claude:  45.2%
+  DeepSeek vs GPT-4o:  59.5%
+  Claude vs GPT-4o:    64.3%
+  All three agree:     38.1%
+
+scalability_bottleneck:
+  DeepSeek vs Claude:  47.6%
+  DeepSeek vs GPT-4o:  66.7%
+  Claude vs GPT-4o:    45.2%
+  All three agree:     38.1%
+
+======================================================================
+OVERALL AGREEMENT STATISTICS
+======================================================================
+Average DeepSeek vs Claude:  54.4%
+Average DeepSeek vs GPT-4o:  61.9%
+Average Claude vs GPT-4o:    49.6%
+Average All Three Agree:     36.3%
+
+======================================================================
+EXAMPLES OF DISAGREEMENTS
+======================================================================
+
+ALGORITHMIC_COMPLEXITY:
+----------------------------------------------------------------------
+  strassen:
+    DeepSeek: O(n^3)
+    Claude:   O(n^2.807)
+    GPT-4o:   O(n^2)
+  jacobi-1d:
+    DeepSeek: O(n)
+    Claude:   O(n^2)
+    GPT-4o:   O(n*tsteps)
+
+SCALABILITY_BOTTLENECK:
+----------------------------------------------------------------------
+  trmm:
+    DeepSeek: none
+    Claude:   load_imbalance
+    GPT-4o:   memory_bandwidth
+  cholesky:
+    DeepSeek: memory_bandwidth
+    Claude:   load_imbalance
+    GPT-4o:   synchronization
+  ludcmp:
+    DeepSeek: memory_bandwidth
+    Claude:   synchronization
+    GPT-4o:   none
+
+LOAD_BALANCE_CHARACTERISTIC:
+----------------------------------------------------------------------
+
+✓ Saved agreement statistics to: data/extracted_features/llm_agreement_statistics.csv
+
+======================================================================
+COMPARISON COMPLETE
+======================================================================
+
+
+
+
+======================================================================
+AGREEMENT STATISTICS
+======================================================================
+cat data/extracted_features/llm_agreement_statistics.csv
+feature,deep_vs_claude,deep_vs_gpt,claude_vs_gpt,all_three
+memory_access_pattern,61.904761904761905,33.33333333333333,28.57142857142857,21.428571428571427
+spatial_locality,59.523809523809526,52.38095238095239,50.0,30.952380952380953
+temporal_locality,66.66666666666666,80.95238095238095,47.61904761904761,47.61904761904761
+data_dependency_type,38.095238095238095,42.857142857142854,50.0,21.428571428571427
+false_sharing_risk,23.809523809523807,50.0,40.476190476190474,14.285714285714285
+load_balance_characteristic,40.476190476190474,88.09523809523809,47.61904761904761,38.095238095238095
+algorithmic_complexity,69.04761904761905,78.57142857142857,66.66666666666666,59.523809523809526
+dominant_operation,83.33333333333334,88.09523809523809,76.19047619047619,73.80952380952381
+vectorization_potential,47.61904761904761,69.04761904761905,50.0,35.714285714285715
+cache_behavior_pattern,69.04761904761905,33.33333333333333,28.57142857142857,16.666666666666664
+parallelization_overhead,45.23809523809524,59.523809523809526,64.28571428571429,38.095238095238095
+scalability_bottleneck,47.61904761904761,66.66666666666666,45.23809523809524,38.095238095238095
+
+
+
+
+======================================================================
+KEY FINDINGS
+======================================================================
+Key Findings for Your Paper
+1. Overall Agreement: 36.3%
+
+Shows LLMs have subjective interpretations of code semantics
+Some features more reliable than others
+
+2. Most Reliable Features (High Agreement)
+
+✅ dominant_operation: 73.8% agreement
+✅ algorithmic_complexity: 59.5% agreement
+✅ temporal_locality: 47.6% agreement
+
+3. Most Subjective Features (Low Agreement)
+
+⚠️ false_sharing_risk: 14.3% agreement
+⚠️ cache_behavior_pattern: 16.7% agreement
+⚠️ memory_access_pattern: 21.4% agreement
+
+4. Pairwise Model Similarity
+
+DeepSeek ↔ GPT-4o: 61.9% (most similar)
+DeepSeek ↔ Claude: 54.4%
+Claude ↔ GPT-4o: 49.6% (most different)
+
+5. Interesting Case: Strassen Algorithm
+
+DeepSeek: O(n³) ❌
+Claude: O(n^2.807) ✅ (CORRECT!)
+GPT-4o: O(n²) ❌
